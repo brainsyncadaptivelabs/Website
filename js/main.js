@@ -66,80 +66,136 @@ document.addEventListener('DOMContentLoaded', () => {
   const contactForm = document.getElementById('contact-form');
   const terminalBody = document.getElementById('terminal-body');
 
-  if (contactForm && terminalBody) {
+  if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
       const nameInput = document.getElementById('form-name');
+      const firstnameInput = document.getElementById('form-firstname');
+      const lastnameInput = document.getElementById('form-lastname');
       const emailInput = document.getElementById('form-email');
       const messageInput = document.getElementById('form-message');
 
-      const name = nameInput.value.trim();
-      const email = emailInput.value.trim();
-      const message = messageInput.value.trim();
+      let name = '';
+      if (nameInput) {
+        name = nameInput.value.trim();
+      } else if (firstnameInput && lastnameInput) {
+        name = `${firstnameInput.value.trim()} ${lastnameInput.value.trim()}`;
+      }
+      
+      const email = emailInput ? emailInput.value.trim() : '';
+      const message = messageInput ? messageInput.value.trim() : '';
 
       if (!name || !email || !message) return;
 
       // Disable form during transmission
       const submitBtn = contactForm.querySelector('button[type="submit"]');
-      const inputs = contactForm.querySelectorAll('input, textarea');
+      const inputs = contactForm.querySelectorAll('input, textarea, select');
       submitBtn.disabled = true;
       inputs.forEach(input => input.disabled = true);
 
-      // Clear input values
-      nameInput.value = '';
-      emailInput.value = '';
-      messageInput.value = '';
+      const clearForm = () => {
+        // Clear input values
+        if (nameInput) nameInput.value = '';
+        if (firstnameInput) firstnameInput.value = '';
+        if (lastnameInput) lastnameInput.value = '';
+        if (emailInput) emailInput.value = '';
+        if (messageInput) messageInput.value = '';
 
-      // Run terminal logs sequence
-      const terminalCursor = terminalBody.querySelector('.terminal-cursor');
-      if (terminalCursor) terminalCursor.remove();
+        const phoneInput = document.getElementById('form-phone');
+        const companyInput = document.getElementById('form-company');
+        const roleInput = document.getElementById('form-role');
+        const countryInput = document.getElementById('form-country');
+        const inquiryTypeInput = document.getElementById('form-inquiry-type');
+        const consentInput = document.getElementById('form-consent');
+        if (phoneInput) phoneInput.value = '';
+        if (companyInput) companyInput.value = '';
+        if (roleInput) roleInput.value = '';
+        if (countryInput) countryInput.value = '';
+        if (inquiryTypeInput) inquiryTypeInput.selectedIndex = 0;
+        if (consentInput) consentInput.checked = false;
+      };
 
-      const lines = [
-        { text: `Initializing secure communication channel...`, type: 'system' },
-        { text: `Establishing TLS handshake... [OK]`, type: 'success' },
-        { text: `Inquiry payload received from: ${name} <${email}>`, type: 'accent' },
-        { text: `Sanitizing input parameters... [CLEAN]`, type: 'system' },
-        { text: `Verifying database write authorization... [OK]`, type: 'system' },
-        { text: `Transmitting record to central database...`, type: 'accent' },
-        { text: `Record indexed. Transmission complete. Transaction ID: BS-${Math.floor(1000 + Math.random() * 9000)}`, type: 'success' },
-        { text: `System idle. Awaiting next inquiry request...`, type: 'system' }
-      ];
+      if (terminalBody) {
+        // Clear input values
+        clearForm();
 
-      let delay = 300;
+        // Run terminal logs sequence
+        const terminalCursor = terminalBody.querySelector('.terminal-cursor');
+        if (terminalCursor) terminalCursor.remove();
 
-      lines.forEach((line, index) => {
+        const lines = [
+          { text: `Initializing secure communication channel...`, type: 'system' },
+          { text: `Establishing TLS handshake... [OK]`, type: 'success' },
+          { text: `Inquiry payload received from: ${name} <${email}>`, type: 'accent' },
+          { text: `Sanitizing input parameters... [CLEAN]`, type: 'system' },
+          { text: `Verifying database write authorization... [OK]`, type: 'system' },
+          { text: `Transmitting record to central database...`, type: 'accent' },
+          { text: `Record indexed. Transmission complete. Transaction ID: BS-${Math.floor(1000 + Math.random() * 9000)}`, type: 'success' },
+          { text: `System idle. Awaiting next inquiry request...`, type: 'system' }
+        ];
+
+        let delay = 300;
+
+        lines.forEach((line, index) => {
+          setTimeout(() => {
+            const lineDiv = document.createElement('div');
+            lineDiv.className = 'terminal-line';
+            
+            const promptSpan = document.createElement('span');
+            promptSpan.className = 'terminal-prompt';
+            promptSpan.textContent = 'bs-labs$';
+            
+            const textSpan = document.createElement('span');
+            textSpan.className = `terminal-text ${line.type}`;
+            textSpan.textContent = line.text;
+
+            lineDiv.appendChild(promptSpan);
+            lineDiv.appendChild(textSpan);
+            
+            terminalBody.appendChild(lineDiv);
+            terminalBody.scrollTop = terminalBody.scrollHeight;
+
+            // If this is the last line, re-append cursor, enable form inputs
+            if (index === lines.length - 1) {
+              const cursorSpan = document.createElement('span');
+              cursorSpan.className = 'terminal-cursor';
+              terminalBody.appendChild(cursorSpan);
+
+              submitBtn.disabled = false;
+              inputs.forEach(input => input.disabled = false);
+            }
+          }, delay);
+        });
+      } else {
+        // No terminal (contact page flow) - show success message
         setTimeout(() => {
-          const lineDiv = document.createElement('div');
-          lineDiv.className = 'terminal-line';
-          
-          const promptSpan = document.createElement('span');
-          promptSpan.className = 'terminal-prompt';
-          promptSpan.textContent = 'bs-labs$';
-          
-          const textSpan = document.createElement('span');
-          textSpan.className = `terminal-text ${line.type}`;
-          textSpan.textContent = line.text;
-
-          lineDiv.appendChild(promptSpan);
-          lineDiv.appendChild(textSpan);
-          
-          terminalBody.appendChild(lineDiv);
-          terminalBody.scrollTop = terminalBody.scrollHeight;
-
-          // If this is the last line, re-append cursor, enable form inputs
-          if (index === lines.length - 1) {
-            const cursorSpan = document.createElement('span');
-            cursorSpan.className = 'terminal-cursor';
-            terminalBody.appendChild(cursorSpan);
-
-            submitBtn.disabled = false;
-            inputs.forEach(input => input.disabled = false);
+          const successMessage = document.getElementById('form-success-message');
+          if (successMessage) {
+            contactForm.style.display = 'none';
+            successMessage.style.display = 'block';
+            successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          } else {
+            alert('Thank you! Your inquiry has been sent successfully.');
           }
-        }, delay);
 
-      });
+          // Enable controls again
+          submitBtn.disabled = false;
+          inputs.forEach(input => input.disabled = false);
+          clearForm();
+        }, 600);
+      }
     });
+
+    // Reset button handling for success card
+    const resetBtn = document.getElementById('form-reset-btn');
+    const successMessage = document.getElementById('form-success-message');
+    if (resetBtn && successMessage) {
+      resetBtn.addEventListener('click', () => {
+        successMessage.style.display = 'none';
+        contactForm.style.display = '';
+      });
+    }
   }
 
   // 7. Works Showcase Tabs Switcher

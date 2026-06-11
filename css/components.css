@@ -1289,3 +1289,27 @@ footer {
   opacity: 0.8;
   margin-bottom: 1rem;
 }
+
+/* Responsive Contact Form Grid */
+.contact-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-span-full {
+  grid-column: span 2;
+}
+
+@media (max-width: 600px) {
+  .contact-form-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .contact-form-grid .form-group {
+    grid-column: span 2 !important;
+  }
+  #contact-form-card {
+    padding: 1.50rem !important;
+  }
+}

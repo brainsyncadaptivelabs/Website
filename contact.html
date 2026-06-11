@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact & Licensing | BrainSync Adaptive Labs</title>
-  <meta name="description" content="Get in touch with BrainSync Adaptive Labs or request evaluation licenses for SyncOS, SyncLink, and CogTwin.">
+  <title>Contact Us</title>
+  <meta name="description"
+    content="Get in touch with BrainSync Adaptive Labs. Discuss enterprise licensing, explore careers, or establish development partnerships.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/components.css">
 </head>
+
 <body>
 
   <!-- Header Navigation -->
@@ -29,75 +32,412 @@
           <li><a href="contact.html" id="nav-link-contact" class="active">Contact Us</a></li>
         </ul>
       </nav>
-      <a href="contact.html" class="glow-btn" id="nav-cta-btn">
-        Request License
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-      </a>
     </div>
   </header>
 
   <!-- Main Content -->
   <main style="padding-top: 120px;">
-    
+
     <!-- Hero Segment -->
     <section class="section-padding" style="padding: 4rem 0 2rem;">
-      <div class="container" style="text-align: center; max-width: 800px;">
-        <div class="badge">Intake Portal</div>
-        <h1 class="gradient-text" style="font-size: 3rem; margin-bottom: 1.5rem;">Licensing & Inquiries</h1>
-        <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.7;">
-          Submit a licensing request to acquire a developer evaluation key or request integration details for our enterprise suites.
+      <div class="container" style="text-align: center; max-width: 850px;">
+        <div class="badge">Operational Phase & Growth</div>
+        <h1 class="gradient-text"
+          style="font-size: 3.5rem; margin-bottom: 1.5rem; font-weight: 800; line-height: 1.15;">Get in touch with our
+          team</h1>
+        <p style="color: var(--text-secondary); font-size: 1.15rem; line-height: 1.7;">
+          Having launched our initial product operations over the past year, BrainSync Adaptive Labs builds
+          high-performance software systems, scalable SaaS platforms, and intelligent AI integrations. Contact us to
+          explore licensing options, client engagements, career opportunities, or strategic partnerships.
         </p>
       </div>
     </section>
 
-    <!-- Licensing Portal Section -->
-    <section class="section-padding" id="contact" style="padding: 2rem 0 6rem; background: rgba(4, 8, 18, 0.4);">
+    <!-- Inquiry Grid (2x4 or responsive grid of cards) -->
+    <section class="section-padding" style="padding: 2rem 0; background: rgba(4, 8, 18, 0.25);">
       <div class="container">
-        
-        <div class="portal-grid reveal active">
-          
-          <!-- Request Form -->
-          <div class="portal-form-container glass" id="contact-form-card">
-            <form id="contact-form">
-              <div class="form-group">
-                <label for="form-name" class="form-label">Name / Enterprise</label>
-                <input type="text" id="form-name" class="form-input" placeholder="e.g. Ada Lovelace (SyncOS Enterprise Trial)" required>
-              </div>
-              <div class="form-group">
-                <label for="form-email" class="form-label">Communication Endpoint (Email)</label>
-                <input type="email" id="form-email" class="form-input" placeholder="e.g. ada@saasops.com" required>
-              </div>
-              <div class="form-group">
-                <label for="form-message" class="form-label">Product Requirements & Deployment Scope</label>
-                <textarea id="form-message" class="form-textarea" placeholder="Describe your product requirements, target timelines, and select the products you wish to license (SyncOS, SyncLink, CogTwin)..." required></textarea>
-              </div>
-              <button type="submit" class="glow-btn glow-btn-primary" style="width: 100%;" id="form-submit">
-                Request Evaluation License
-              </button>
-            </form>
+        <div class="services-grid reveal"
+          style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;" id="inquiry-grid">
+
+          <!-- Clients (Licensing & Sales) -->
+          <div class="service-card glass">
+            <div class="service-card-icon" style="color: var(--color-primary);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3>Client & License Inquiries</h3>
+            <p>Interested in licensing SyncOS, integrating our SyncLink SDK, or requesting customized enterprise
+              solutions?</p>
+            <a href="#contact-form-section" class="product-learn-more" style="margin-top: 1rem;">Inquire about Licensing
+              <span>→</span></a>
           </div>
 
-          <!-- Console Terminal -->
-          <div class="terminal-card" id="contact-terminal-card">
-            <div class="terminal-header">
-              <div class="terminal-dots">
-                <div class="terminal-dot-btn red"></div>
-                <div class="terminal-dot-btn yellow"></div>
-                <div class="terminal-dot-btn green"></div>
-              </div>
-              <div class="terminal-title">BrainSync CLI - License System</div>
-              <div style="width: 38px;"></div> <!-- visual balance spacer -->
+          <!-- Job Seekers (Careers) -->
+          <div class="service-card glass">
+            <div class="service-card-icon" style="color: var(--color-secondary);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
             </div>
-            <div class="terminal-body" id="terminal-body">
-              <div class="terminal-line">
-                <span class="terminal-prompt">bs-labs$</span>
-                <span class="terminal-text system">System active. Licensing gateway online.</span>
+            <h3>Careers & Hiring</h3>
+            <p>We are actively expanding our engineering, AI research, design, and operations teams. Explore our open
+              positions.</p>
+            <a href="about.html#vision-mission" class="product-learn-more" style="margin-top: 1rem;">Explore Careers
+              <span>→</span></a>
+          </div>
+
+          <!-- Partnerships (Co-Development) -->
+          <div class="service-card glass">
+            <div class="service-card-icon" style="color: var(--color-accent);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                </path>
+              </svg>
+            </div>
+            <h3>Ecosystem Partnerships</h3>
+            <p>Collaborate with us on modular SDK integration standards, custom hardware APIs, or research partnerships.
+            </p>
+            <a href="#contact-form-section" class="product-learn-more" style="margin-top: 1rem;">Partner with Us
+              <span>→</span></a>
+          </div>
+
+          <!-- Investors (Growth Funding) -->
+          <div class="service-card glass">
+            <div class="service-card-icon" style="color: var(--color-success);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                <polyline points="17 6 23 6 23 12"></polyline>
+              </svg>
+            </div>
+            <h3>Investor Relations</h3>
+            <p>Discuss follow-on seed/venture funding rounds, licensing opportunities, or technology capitalization.</p>
+            <a href="#contact-form-section" class="product-learn-more" style="margin-top: 1rem;">Contact leadership
+              <span>→</span></a>
+          </div>
+
+          <!-- Media (Press & PR) -->
+          <div class="service-card glass">
+            <div class="service-card-icon" style="color: var(--color-primary);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+              </svg>
+            </div>
+            <h3>Media & Press</h3>
+            <p>Access our recent corporate updates, brand resource guidelines, or submit public relations inquiry
+              requests.</p>
+            <a href="#contact-form-section" class="product-learn-more" style="margin-top: 1rem;">Press Inquiries
+              <span>→</span></a>
+          </div>
+
+          <!-- Suppliers / Vendors (Infrastructure) -->
+          <div class="service-card glass">
+            <div class="service-card-icon" style="color: var(--color-secondary);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                </path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <h3>Suppliers & Procurement</h3>
+            <p>Coordinate cloud infrastructure services, software subscription billing, edge hardware, and logistics.
+            </p>
+            <a href="#contact-form-section" class="product-learn-more" style="margin-top: 1rem;">Submit Proposal
+              <span>→</span></a>
+          </div>
+
+          <!-- Alumni Network (Advisors & Community) -->
+          <div class="service-card glass">
+            <div class="service-card-icon" style="color: var(--color-accent);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </div>
+            <h3>Alumni & Advisors</h3>
+            <p>Engage with our strategic advisors, access corporate directories, and connect with the developer
+              community.</p>
+            <a href="https://www.linkedin.com/company/brainsyncadaptive-labs/?viewAsMember=true" target="_blank"
+              rel="noopener" class="product-learn-more" style="margin-top: 1rem;">Alumni Portal <span>→</span></a>
+          </div>
+
+          <!-- Customer Support -->
+          <div class="service-card glass">
+            <div class="service-card-icon" style="color: var(--color-success);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+            </div>
+            <h3>Customer Support</h3>
+            <p>For active platform customers, license holders, and partners to submit technical service tickets or
+              feedback.</p>
+            <a href="#contact-form-section" class="product-learn-more" style="margin-top: 1rem;">Get Support
+              <span>→</span></a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form & Terminal Section -->
+    <section class="section-padding" id="contact-form-section"
+      style="padding: 5rem 0; background: rgba(4, 8, 18, 0.4);">
+      <div class="container">
+
+        <div class="reveal" style="text-align: center; max-width: 700px; margin: 0 auto 4rem;">
+          <div class="badge">Inquiry Portal</div>
+          <h2 class="gradient-text" style="font-size: 2.5rem; margin-bottom: 1rem;">Need something else?</h2>
+          <p style="color: var(--text-secondary);">
+            Submit a request brief using the portal below and we will route your inquiry to the correct team.
+          </p>
+        </div>
+
+        <div class="reveal" style="max-width: 800px; margin: 0 auto; width: 100%;">
+
+          <!-- Request Form -->
+          <div class="glass" id="contact-form-card" style="padding: 3rem; border-radius: 16px;">
+            <form id="contact-form" class="contact-form-grid">
+              <!-- Inquiry Type Dropdown -->
+              <div class="form-group form-span-full">
+                <label for="form-inquiry-type" class="form-label">Inquiry Type *</label>
+                <select id="form-inquiry-type" class="form-input"
+                  style="background: rgba(4, 8, 18, 0.6); color: var(--text-primary); border: 1px solid rgba(255, 255, 255, 0.08); padding: 0.8rem 1rem; border-radius: 8px; width: 100%; font-family: inherit; font-size: 0.95rem;"
+                  required>
+                  <option value="" disabled selected>Select an option...</option>
+                  <option value="licensing">Client & Licensing - I want to discuss business opportunities or license
+                    products</option>
+                  <option value="careers">Careers - I have a question about open roles or working with us</option>
+                  <option value="partnership">Ecosystem Partnerships - I want to explore collaborations or integrations
+                  </option>
+                  <option value="investors">Investor Relations - I want to speak with the leadership team</option>
+                  <option value="media">Media & Press - I have a media or public relations inquiry</option>
+                  <option value="vendor">Suppliers & Vendors - I want to offer services, tooling, or billing support
+                  </option>
+                  <option value="alumni">Alumni & Advisors - Support for former team members and advisors</option>
+                  <option value="support">Customer Support - Technical support or bug report</option>
+                  <option value="other">Other - General inquiry</option>
+                </select>
               </div>
-              <div class="terminal-line">
-                <span class="terminal-prompt">bs-labs$</span>
-                <span class="terminal-text system">Awaiting licensing request stream. Ready.</span>
+
+              <!-- About You Subsection -->
+              <div class="form-span-full"
+                style="margin-top: 1rem; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 0.5rem;">
+                <h4
+                  style="font-family: var(--font-display); color: var(--text-primary); font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;">
+                  About You</h4>
               </div>
-              <span class="terminal-cursor"></span>
+
+              <!-- First Name -->
+              <div class="form-group">
+                <label for="form-firstname" class="form-label">First name *</label>
+                <input type="text" id="form-firstname" class="form-input" placeholder="First Name" required>
+              </div>
+
+              <!-- Last Name -->
+              <div class="form-group">
+                <label for="form-lastname" class="form-label">Last name *</label>
+                <input type="text" id="form-lastname" class="form-input" placeholder="Last Name" required>
+              </div>
+
+              <!-- Email Address -->
+              <div class="form-group">
+                <label for="form-email" class="form-label">Email address *</label>
+                <input type="email" id="form-email" class="form-input" placeholder="you@example.com" required>
+              </div>
+
+              <!-- Phone Number -->
+              <div class="form-group">
+                <label for="form-phone" class="form-label">Phone Number (Please include country code)</label>
+                <input type="tel" id="form-phone" class="form-input" placeholder="e.g. +91 98765 43210">
+              </div>
+
+              <!-- Company -->
+              <div class="form-group">
+                <label for="form-company" class="form-label">Company / Organization *</label>
+                <input type="text" id="form-company" class="form-input" placeholder="e.g. Acme Corp" required>
+              </div>
+
+              <!-- Role/Function -->
+              <div class="form-group">
+                <label for="form-role" class="form-label">Your role / function</label>
+                <input type="text" id="form-role" class="form-input" placeholder="e.g. Product Manager">
+              </div>
+
+              <!-- Country/Region -->
+              <div class="form-group form-span-full">
+                <label for="form-country" class="form-label">Country / Region *</label>
+                <input type="text" id="form-country" class="form-input" placeholder="e.g. India" required>
+              </div>
+
+              <!-- Message -->
+              <div class="form-group form-span-full">
+                <label for="form-message" class="form-label">How can we help you? *</label>
+                <textarea id="form-message" class="form-textarea" placeholder="Provide details about your query..."
+                  required style="min-height: 120px;"></textarea>
+              </div>
+
+              <!-- Consent checkbox -->
+              <div class="form-group form-span-full"
+                style="display: flex; align-items: flex-start; gap: 0.75rem; margin-top: 0.5rem; margin-bottom: 0;">
+                <input type="checkbox" id="form-consent" required style="margin-top: 0.3rem; cursor: pointer;">
+                <label for="form-consent" class="form-label"
+                  style="font-size: 0.85rem; line-height: 1.5; color: var(--text-secondary); cursor: pointer; user-select: none;">
+                  I agree to the processing of my personal information in accordance with BrainSync's <a
+                    href="privacy.html" style="color: var(--color-accent); text-decoration: underline;">Privacy
+                    Policy</a>. *
+                </label>
+              </div>
+
+              <!-- Submit button -->
+              <div class="form-group form-span-full" style="margin-top: 1rem; margin-bottom: 0;">
+                <button type="submit" class="glow-btn glow-btn-primary" style="width: 100%;" id="form-submit">
+                  Submit Inquiry
+                </button>
+              </div>
+            </form>
+
+            <!-- Success Message Container -->
+            <div id="form-success-message" style="display: none; text-align: center; padding: 2rem 1rem;">
+              <div
+                style="width: 64px; height: 64px; background: rgba(0, 230, 118, 0.15); border: 1px solid var(--color-success); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; color: var(--color-success); box-shadow: 0 0 20px rgba(0, 230, 118, 0.2);">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <h3 class="gradient-text"
+                style="font-size: 1.8rem; margin-bottom: 1rem; font-weight: 700; font-family: var(--font-display);">
+                Inquiry Received</h3>
+              <p
+                style="color: var(--text-secondary); line-height: 1.6; max-width: 500px; margin: 0 auto 2rem; font-size: 0.95rem;">
+                Thank you for connecting. Your request has been securely routed to our team. A representative will
+                review and respond to your inquiry within 24-48 business hours.
+              </p>
+              <button id="form-reset-btn" class="glow-btn" style="padding: 0.6rem 1.5rem; font-size: 0.9rem;">
+                Send Another Message
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- More Ways to Connect (Direct channels and single location) -->
+    <section class="section-padding"
+      style="padding: 5rem 0; background: rgba(4, 8, 18, 0.2); border-top: 1px solid rgba(255, 255, 255, 0.05);">
+      <div class="container">
+
+        <div class="reveal" style="text-align: center; max-width: 700px; margin: 0 auto 4rem;">
+          <div class="badge">More Ways to Connect</div>
+          <h2 class="gradient-text" style="font-size: 2.5rem; margin-bottom: 1rem;">Direct Channels</h2>
+          <p style="color: var(--text-secondary);">
+            Reach out to us directly or visit our headquarters.
+          </p>
+        </div>
+
+        <div class="grid-cols-2 reveal" style="gap: 3rem; align-items: stretch;">
+
+          <!-- Call Us / Email Cards -->
+          <div style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+            <div class="glass"
+              style="padding: 2.5rem; display: flex; flex-direction: column; gap: 1.25rem; height: 100%;">
+              <h3 class="gradient-text"
+                style="font-size: 1.6rem; display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-primary);">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
+                Direct Channels
+              </h3>
+              <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+                Feel free to reach out to us during normal business hours (Monday to Friday, 9:00 AM - 6:00 PM IST)
+              </p>
+
+              <div
+                style="display: flex; flex-direction: column; gap: 1.25rem; font-family: var(--font-mono); font-size: 0.95rem;">
+
+                <div>
+                  <span
+                    style="color: var(--text-muted); display: block; font-size: 0.75rem; text-transform: uppercase; margin-bottom: 0.25rem;">General
+                    Inquiries:</span>
+                  <a href="mailto:founders.brainsynclabs@gmail.com"
+                    style="color: var(--color-accent); font-weight: 600; text-decoration: none;">founders.brainsynclabs@gmail.com</a>
+                </div>
+                <!--  <div>
+                  <span
+                    style="color: var(--text-muted); display: block; font-size: 0.75rem; text-transform: uppercase; margin-bottom: 0.25rem;">Data
+                    Protection:</span>
+                  <a href="mailto:privacy@brainsync.com"
+                    style="color: var(--color-accent); font-weight: 600; text-decoration: none;">privacy@brainsync.com</a>
+                </div>-->
+              </div>
+            </div>
+          </div>
+
+          <!-- Single Location Card -->
+          <div style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+            <div class="glass"
+              style="padding: 2.5rem; display: flex; flex-direction: column; gap: 1.25rem; height: 100%;">
+              <h3 class="gradient-text"
+                style="font-size: 1.6rem; display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-secondary);">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                Headquarters
+              </h3>
+              <!-- <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+                Visit our product development lab and engineering center in Bengaluru, India.
+              </p>
+              -->
+
+              <div style="line-height: 1.7; margin-bottom: 1rem;">
+                <strong
+                  style="color: var(--text-primary); font-size: 1.1rem; display: block; margin-bottom: 0.5rem;">BrainSync
+                  Adaptive Labs</strong>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem;">
+                  Nellore, Andhra Pradesh, 524001,<br>
+                  India
+                </p>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                  <a href="#" target="_blank" rel="noopener" class="glow-btn glow-btn-primary"
+                    style="padding: 0.6rem 1.2rem; font-size: 0.85rem; text-decoration: none;">
+                    Get Directions
+                  </a>
+                  <a href="https://www.linkedin.com/company/brainsyncadaptive-labs/?viewAsMember=true" target="_blank"
+                    rel="noopener" class="glow-btn"
+                    style="padding: 0.6rem 1.2rem; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none;">
+                    <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" style="color: #0077b5;">
+                      <path
+                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                    LinkedIn Page
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -113,9 +453,11 @@
     <div class="container">
       <div class="footer-grid" id="footer-top-grid">
         <div class="footer-brand" id="footer-brand-info">
-          <img src="assets/logo.jpg" alt="BrainSync Logo" style="height: 35px; border-radius: 4px; margin-bottom: 1rem; display: block;">
+          <img src="assets/logo.jpg" alt="BrainSync Logo"
+            style="height: 35px; border-radius: 4px; margin-bottom: 1rem; display: block;">
           <p>
-            High-performance software systems, scalable SaaS platforms, and intelligent artificial intelligence integrations.
+            High-performance software systems, scalable SaaS platforms, and intelligent artificial intelligence
+            integrations.
           </p>
         </div>
         <div class="footer-links" id="footer-nav-col">
@@ -144,9 +486,7 @@
           <a href="terms.html">Terms & Conditions</a>
           <a href="cookies.html">Cookie Policy</a>
         </div>
-        <div style="font-family: var(--font-mono); font-size: 0.75rem;">
-          SYSTEM STATE: <span style="color: var(--color-success);">ONLINE (SECURE)</span>
-        </div>
+
       </div>
     </div>
   </footer>
@@ -154,4 +494,5 @@
   <!-- Scripts -->
   <script type="module" src="js/main.js"></script>
 </body>
+
 </html>
